@@ -1,8 +1,5 @@
-# Handsomely Theme by Deenesh Chowdhary - Jekyll Version
+## Live Demo &rarr; (https://rohithh.github.io/)
 
-## Live Demo &rarr; (https://deeneshchowdhary.github.io/handsomely/)
-
-![Handsomely theme preview](/screenshot.png)
 
 ## Before you Being
 
