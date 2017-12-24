@@ -6,6 +6,7 @@ description: "small description about you will take you long"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email_username: rohith.hy@asu.edu #Your email address
+linkedin_username : rohith-h-y #LinkedIn address
 github_username:  rohithh #Github Username goes here
 copyright_name: Rohith H Y #Copyright 
 # Build settings
