@@ -6,7 +6,7 @@ author:     "Rohith H Y"
 feature: "post-two.jpg"
 subtitle: "I’ve been creating an application to monitor the atmospheric pollution using a Bluetooth LE device. Initially, it was a bit hard as I was overwhelmed with the number of options available but I was eventually able to figure out what needed to be done to establish a connection between the phone and device and extract the bluetooth data."
 ---
-<p>
+<p> 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam odio neque, maximus volutpat sapien sit amet, ornare ultricies lacus. Donec vestibulum vehicula pulvinar. Nulla diam leo, euismod quis cursus in, finibus eget metus. Sed molestie, orci et accumsan porta, leo felis efficitur quam, dignissim hendrerit lorem risus sed tellus. Morbi volutpat arcu ut felis interdum vehicula. Morbi fringilla, turpis id porttitor viverra, quam lacus varius felis, eu pulvinar odio metus nec leo. Praesent nisi quam, fringilla ut congue in, faucibus sed magna. Nunc egestas nunc sed dolor molestie, sed fermentum odio maximus. 
 </p>
 <p>
@@ -23,17 +23,7 @@ Donec id tempus mauris. Nunc vitae ligula id risus consectetur semper. Nunc cond
 
 <article id="post-132" class="post-132 post type-post status-publish format-standard hentry category-uncategorized tag-android tag-bluetooth tag-bluetooth-low-energy tag-mobile">
 	<header class="entry-header">
-		<h1 class="entry-title">How to use the Bluetooth Low Energy API in&nbsp;Android</h1>				
-		<div class="entry-meta">
-	    	<span class="posted-on">
-    	    	<a href="https://thehylifeblog.wordpress.com/2016/07/08/how-to-use-the-bluetooth-low-energy-api-in-android/" rel="bookmark">
-    	    	    <time class="entry-date published" datetime="2016-07-08T08:35:39+00:00">July 8, 2016</time>
-    	    	</a>
-	    	</span>
-	    	<span class="byline">
-	    	    <span class="sep"> / </span>
-	        </span>		
-    	</div>  
+		<h1 class="entry-title">How to use the Bluetooth Low Energy API in&nbsp;Android</h1>	 
     </header>
 
 	<div class="entry-content">
