@@ -37,5 +37,4 @@ subtitle: "I’ve been creating an application to monitor the atmospheric pollut
     <p style="text-align:left;"><strong>NOTE</strong>: The startLeScan &nbsp;and stopLeScan of the BluetoothAdapter class have been deprecated and replaced by other methods, please feel free to use them. I used them for this tutorial because they are unbelievably easy to use and I was able to add the desired functionality to my app successfully.</p>
     <p style="text-align:left;">
 	</p>
-	<div class="wpcnt"></div>			
 </div>
