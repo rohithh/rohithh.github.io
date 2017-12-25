@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="small description about you will take you long">
+    <title>The simple steps to deploy apps on Google App Engine - Rohith H Y</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+
+<body>
+
+    <header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="/"><h1>Rohith H Y</h1></a>
+          </div>
+          <div class="site-description">
+            <p>Software Engineer, Pianist, Future Entrepreneur </p>
+          </div>
+        </div>
+        <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+          
+		  
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/blog.html">Blog</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/contact.html">Contact</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/music.html">Music</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/projects.html">Projects</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/typography.html">Typography</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main Content -->
+<section>
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="post-preview">
+            <header class="post-header">
+              <div class="post-title">
+                 The simple steps to deploy apps on Google App Engine
+              </div>
+              <div class="post-subtitle">
+                Posted by Rohith H Y on June 21, 2016
+              </div>
+            </header>
+            <article class="post-article">
+             <div class="entry-content">
+	<p>So, the latest adventure that I’ve embarked upon is the Google App Engine. Trying to create and deploy some&nbsp;web applications. Ran into some trouble trying to deploy the app that I created onto the Engine.</p>
+    <p>I had to go through a lot of tutorials, tried at least 5 different ways to do what I am about to show you. Of all the possible ways that I tried, I found this to be the simplest and hence I’d like to share it to you and spare you the trouble of googling and youtubing away a few hours. The approach I am using is the simple GUI way of doing it without using the command-line, though I’d like to add&nbsp;that that route is not too hard&nbsp;a route to take either.</p>
+    <p>I have tried to make it as simple and short as possible with very concise steps because I know you probably want it all and you want it fast. So, hope you find it useful.</p>
+    <p>Here’s the step-by-step procedure to follow to be able to easily deploy your app online for a mac ( divided into parts A and B ) :</p>
+    <p><strong>A.</strong>&nbsp;&nbsp;<strong>Downloads to be done</strong></p>
+    <ol>
+        <ol>
+            <li>Download the Google App Engine SDK ( By searching for it on Google of course ). The detailed steps are : Google &gt; Google App Engine SDK &gt; SDK for Python/Java/ Language of your choice.</li>
+            <li>Then unzip the file &gt; Double click the .dmg file &gt; Drag it into your Applications folder</li>
+            <li>Now you have it on your computer, double click it and launch it. The downloaded file is called GoogleAppEngineLauncher with the cool icon shown below.</li>
+        </ol>
+    </ol>
+    <p><img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-11-53-03-am.png" /></p>
+    <p>4. &nbsp;It will launch another cool window that is shown below :</p>
+    <p><img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-11-54-40-am.png" /></p>
+    <p>Congratulations, you have successfully completed the easy part of the tutorial. Now for the hard(er) part.</p>
+    <p><strong>B. Creating and Deploying the application</strong></p>
+    <p>1. Go to <span class="skimlinks-unlinked">appengine.google.com</span> &gt; Click&nbsp;<strong>Google Developers Console </strong>&gt; Create a project shown below</p>
+    <p><img style="display:block;margin:auto;width:90%" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-12-04-41-pm.png" /></p>
+    <p>2. It then asks for a project name, and auto-generates a wicked project-id for you ( which is very&nbsp;<strong>important</strong> and can be edited according to your choice).</p>
+    <p>Note : I say the project-id is important as you will be deploying your app to the below url : &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong><span class="skimlinks-unlinked">project-id.appspot.com</span>&nbsp;</strong>so choose one that you can remember.</p>
+    <p><img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-12-05-42-pm.png" /></p>
+    <p>3. The project has now been created online. Now you should write and deploy code from your desktop to the project. ( While it can be done online as well, I will demonstrate how to do it on your machine and then deploy it ).</p>
+    <p>4. Open the GoogleAppEngineLauncher &gt;&nbsp;File &gt; New Application</p>
+    <p>You can choose the desired port to run the application on your computer to test it. I have chosen 9080.</p>
+    <p><img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-12-14-21-pm.png" /></p>
+    <p><strong>Important : Application ID must be same as the one you chose while creating your project online</strong></p>
+    <p>5. Now this creates a folder on your computer in the specified path with the following files.</p>
+    <p><img style="display:block;margin:auto;width:90%" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-12-17-57-pm.png?" /></p>
+    <p><span class="skimlinks-unlinked">app.yaml</span> : Basic configuration files to set your application name, version and other &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; important metadata</p>
+    <p><span class="skimlinks-unlinked">main.py</span> : This is an&nbsp;important file that contains the program that you wish to deploy on the server. Here you can use this to create the basic layout of your web page and add different functionality to your programs. Mine simply displays “Hello world!”.</p>
+    <p>6. Now you can test it on your local server by hitting “Run” on GoogleAppEngineLauncher.</p>
+    <p>7. Once you’re fine with that, you just hit deploy on GoogleAppEngineLauncher.</p>
+    <p>8. Next go to the url <span class="skimlinks-unlinked">your-app-id.appspot.com</span> and you will see your app/web page up and running. The below is one such app that I was able to successfully run on the Engine (although on a different id than the one that I have used) .</p>
+    <p><img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/06/screen-shot-2016-06-21-at-12-30-13-pm.png?" /></p>
+    <p>&nbsp;</p>
+    <p>Rohith out.</p>
+</div>
+ 
+            </article>
+</div>
+<hr> 
+<div class="pager">
+    
+    <a href="/2016/06/10/Serial-Communication-Mac.html" class="button u-pull-left" title="The troubles of serial communication on a Mac">&larr; Previous</a>
+    
+    
+    <a href="/2016/07/08/Blog-Bluetooth-LE-API.html" class="button u-pull-right" title="How to use the Bluetooth Low Energy API in Android">Next &rarr;</a>
+    
+</div>
+
+		</div>
+	</div>
+</div>
+</section>
+
+    <!--FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row about-category">
+      <div class="twelve columns">
+        <div class="about"> 
+          <div class="about-social">
+            <ul>
+            
+              <li><a href="mailto:rohith.hy@asu.edu">Email</a></li>
+            
+            
+            
+            
+              <li><a href="https://github.com/rohithh">GitHub</a></li>
+            
+            
+              <li><a href="https://www.linkedin.com/in/rohith-h-y">LinkedIn</a></li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="copyright">
+          &copy; 2017 Rohith H Y
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--END FOOTER -->
+
+    
+</body>
+</html>

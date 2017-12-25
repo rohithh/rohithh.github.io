@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="small description about you will take you long">
+    <title>The troubles of serial communication on a Mac - Rohith H Y</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+
+<body>
+
+    <header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="/"><h1>Rohith H Y</h1></a>
+          </div>
+          <div class="site-description">
+            <p>Software Engineer, Pianist, Future Entrepreneur </p>
+          </div>
+        </div>
+        <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+          
+		  
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/blog.html">Blog</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/contact.html">Contact</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/music.html">Music</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/projects.html">Projects</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/typography.html">Typography</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main Content -->
+<section>
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="post-preview">
+            <header class="post-header">
+              <div class="post-title">
+                 The troubles of serial communication on a Mac
+              </div>
+              <div class="post-subtitle">
+                Posted by Rohith H Y on June 10, 2016
+              </div>
+            </header>
+            <article class="post-article">
+             <div class="entry-content">
+	<p>In this post I describe the simple solution of where you can find the USB/Serial devices on your mac. All you really need to do is download the JSSC class on java first in order to be able to work with the device on java .&nbsp;The device I am using is a CP210x USB to UART that gives me serial data.</p>
+    <p>So here’s what people would normally do :</p>
+    <pre><code> String[] portNames = SerialPort.getPortNames("COM3");</code></pre>
+    <p>Dear Mister Whoever,</p>
+    <p>This is not going to work. Instead try :</p>
+    <pre> Pattern pattern = Pattern.compile("tty.");
+     String[] portNames = SerialPortList.getPortNames("/dev", pattern);</pre>
+    <p>since this is where the usb devices show up on a Mac.</p>
+    <p>You will have access to the portNames this way. Then you can proceed to read the serial data and have a jolly good day.<br />
+    The next thing you do to read the data is :</p>
+    <p>[ The below line is important as it points to the serial port. In windows you would give it as COM3 or the like. After that, the procedure is pretty much the same. This one line would have saved me a bunch of hours had I found it online. ]</p>
+    <pre><code><strong>SerialPort serialPort = new SerialPort("/dev/tty.SLAB_USBtoUART");&nbsp;</strong>
+     
+     serialPort.openPort();
+     serialPort.setParams(SerialPort.BAUDRATE_9600,
+     SerialPort.DATABITS_8,
+     SerialPort.STOPBITS_1,
+     SerialPort.PARITY_NONE);</code></pre>
+    <p>&nbsp;</p>
+    <p>Rohith out.</p>
+</div>
+ 
+            </article>
+</div>
+<hr> 
+<div class="pager">
+    
+    
+    <a href="/2016/06/21/Blog-Google-App-Engine-Deploy.html" class="button u-pull-right" title="The simple steps to deploy apps on Google App Engine">Next &rarr;</a>
+    
+</div>
+
+		</div>
+	</div>
+</div>
+</section>
+
+    <!--FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row about-category">
+      <div class="twelve columns">
+        <div class="about"> 
+          <div class="about-social">
+            <ul>
+            
+              <li><a href="mailto:rohith.hy@asu.edu">Email</a></li>
+            
+            
+            
+            
+              <li><a href="https://github.com/rohithh">GitHub</a></li>
+            
+            
+              <li><a href="https://www.linkedin.com/in/rohith-h-y">LinkedIn</a></li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="copyright">
+          &copy; 2017 Rohith H Y
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--END FOOTER -->
+
+    
+</body>
+</html>

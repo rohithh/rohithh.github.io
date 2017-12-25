@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="small description about you will take you long">
+    <title>How to use the Bluetooth Low Energy API in Android - Rohith H Y</title>
+    <link rel="stylesheet" href="/assets/css/normalize.css">
+    <link rel="stylesheet" href="/assets/css/skeleton.css">
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+
+<body>
+
+    <header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="/"><h1>Rohith H Y</h1></a>
+          </div>
+          <div class="site-description">
+            <p>Software Engineer, Pianist, Future Entrepreneur </p>
+          </div>
+        </div>
+        <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+          
+		  
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/blog.html">Blog</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/contact.html">Contact</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/music.html">Music</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/projects.html">Projects</a>
+          </li>
+          
+          
+		  
+          <li class="navbar-item">
+              <a class="navbar-link" href="/typography.html">Typography</a>
+          </li>
+          
+          
+        </ul>
+      </div>
+    </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Main Content -->
+<section>
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="post-preview">
+            <header class="post-header">
+              <div class="post-title">
+                 How to use the Bluetooth Low Energy API in Android
+              </div>
+              <div class="post-subtitle">
+                Posted by Rohith H Y on July 8, 2016
+              </div>
+            </header>
+            <article class="post-article">
+             <div class="entry-content">
+	<p>I’ve been creating an application to monitor the atmospheric pollution using a Bluetooth LE device. Initially, it was a bit hard as I was overwhelmed with the number of options available but I was eventually able to figure out what needed to be done to establish a connection between the phone and device and extract the bluetooth data.</p>
+    <p>The below video helped a lot, it is very straightforward compared to a lot of the others and helped me in building my application :&nbsp;<span class="skimlinks-unlinked">https://www.youtube.com/watch?v=x1y4tEHDwk0&amp;list=PL2PAEHK-s-1UlXHzBhIP68yCsP8EOHgxJ</span></p>
+    <p>1. Make your activity implement BluetoothAdapter.LeScanCallback</p>
+    <pre><code>public class Main extends Activity implements BluetoothAdapter.LeScanCallback {</code></pre>
+    <p>2. Get a&nbsp;reference to the bluetooth manager</p>
+    <pre><code>BluetoothManager manager = (BluetoothManager) getSystemService(BLUETOOTH_SERVICE);
+    mBluetoothAdapter = manager.getAdapter();</code></pre>
+    <p>3. Have a “Start Scanning” &nbsp;button in your UI which when clicked would begin scanning for Bluetooth LE devices and “Stop Scanning” to stop scanning. When clicked, the corresponding methods below would be executed :</p>
+    <pre><code>private void startScan(View view) {
+    Toast.makeText(this, "Starting scan", Toast.LENGTH_SHORT).show();
+    mBluetoothAdapter.startLeScan(this);
+    }</code></pre>
+    <pre><code>public void stopScan(View view) {
+        Toast.makeText(this, "Stopping scan", Toast.LENGTH_SHORT).show();
+        mBluetoothAdapter.stopLeScan(this);
+    }</code></pre>
+    <p style="text-align:center;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <img style="display:block;margin:auto;" src="https://thehylifeblog.files.wordpress.com/2016/07/screen-shot-2016-07-08-at-1-16-54-pm.png" /></p>
+    <p style="text-align:left;"><strong>Explanation</strong> : startLeScan and stopLeScan are methods of the BluetoothAdapter class which start or stop the scanning process when called.</p>
+    <p style="text-align:left;">3. Now, whenever a device is located a call back function is executed from where you can extract its name, address and data that it is sending.</p>
+    <pre><code>@Override
+    public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
+        <span class="skimlinks-unlinked">System.out.println("New</span>ce : " + device.getName() + " : " + device.getAddress());
+        Toast.makeText(this,"New Device : " + device.getName() + " : " + device.getAddress(), Toast.LENGTH_SHORT).show();
+    }</code></pre>
+    <p style="text-align:left;"></p>
+    <p style="text-align:left;">4. Now that the connection is established, you may proceed to operate on your data in the ways you wish.</p>
+    <p style="text-align:left;"><strong>NOTE</strong>: The startLeScan &nbsp;and stopLeScan of the BluetoothAdapter class have been deprecated and replaced by other methods, please feel free to use them. I used them for this tutorial because they are unbelievably easy to use and I was able to add the desired functionality to my app successfully.</p>
+    <p style="text-align:left;">
+	</p>
+</div>
+ 
+            </article>
+</div>
+<hr> 
+<div class="pager">
+    
+    <a href="/2016/06/21/Blog-Google-App-Engine-Deploy.html" class="button u-pull-left" title="The simple steps to deploy apps on Google App Engine">&larr; Previous</a>
+    
+    
+    <a href="/2017/05/16/welcome-to-jekyll.html" class="button u-pull-right" title="Welcome to my Site!">Next &rarr;</a>
+    
+</div>
+
+		</div>
+	</div>
+</div>
+</section>
+
+    <!--FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row about-category">
+      <div class="twelve columns">
+        <div class="about"> 
+          <div class="about-social">
+            <ul>
+            
+              <li><a href="mailto:rohith.hy@asu.edu">Email</a></li>
+            
+            
+            
+            
+              <li><a href="https://github.com/rohithh">GitHub</a></li>
+            
+            
+              <li><a href="https://www.linkedin.com/in/rohith-h-y">LinkedIn</a></li>
+            
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="twelve columns">
+        <div class="copyright">
+          &copy; 2017 Rohith H Y
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--END FOOTER -->
+
+    
+</body>
+</html>
