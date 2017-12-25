@@ -4,6 +4,8 @@ title:      "The simple steps to deploy apps on Google App Engine"
 date:       2016-06-21 12:00:00
 author:     "Rohith H Y"
 feature: "post-three.jpg"
+imgurl: "https://www.blossom.co/wp-content/uploads/2011/05/appengine-1160x630.png"
+imgStyle: "display:block;margin:auto;"
 subtitle: "So, the latest adventure that I’ve embarked upon is the Google App Engine. Trying to create and deploy some web applications. Ran into some trouble trying to deploy the app that I created onto the Engine."
 ---
 <div class="entry-content">
