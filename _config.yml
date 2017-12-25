@@ -1,6 +1,6 @@
 #Developer- Rohith H Y
 title: Rohith H Y
-site-description: "Software Engineer, Pianist, Future Entrepreneur "
+site-description: "Software Engineer, Pianist, Possibly Batman? "
 email: your-email@domain.com
 description: "small description about you will take you long"
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -12,6 +12,7 @@ copyright_name: Rohith H Y #Copyright
 # Build settings
 markdown: kramdown
 paginate: 5 #Total Number of Post in each Page
+paginate_path: /blog/page:num
 gems: [jekyll-paginate, jekyll-feed]
 exclude:
   - Gemfile
