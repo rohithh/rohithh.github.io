@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "How to use the Bluetooth Low Energy API in Android
+title:      "How to use the Bluetooth Low Energy API in Android"
 date:       2016-07-08 12:00:00
 author:     "Rohith H Y"
 feature: "post-three.jpg"
