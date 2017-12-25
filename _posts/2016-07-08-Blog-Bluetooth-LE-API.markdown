@@ -4,6 +4,7 @@ title:      "How to use the Bluetooth Low Energy API in Android"
 date:       2016-07-08 12:00:00
 author:     "Rohith H Y"
 feature: "post-three.jpg"
+imgStyle : "display:block;margin:auto;"
 imgurl : "https://thehylifeblog.files.wordpress.com/2016/07/screen-shot-2016-07-08-at-1-16-54-pm.png?w=348&h=469"
 subtitle: "I’ve been creating an application to monitor the atmospheric pollution using a Bluetooth LE device. Initially, it was a bit hard as I was overwhelmed with the number of options available but I was eventually able to figure out what needed to be done to establish a connection between the phone and device and extract the bluetooth data."
 ---
